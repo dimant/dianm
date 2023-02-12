@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/diman/src/dainm/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/dainm.dir/src/main.cpp.o -c /home/diman/src/dainm/src/main.cpp",
-  "file": "/home/diman/src/dainm/src/main.cpp"
-}
-]
