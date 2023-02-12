@@ -1,18 +1,4 @@
-# Build artifacts
-build/
+cmake_minimum_required(VERSION 3.10)
+project(dainm)
 
-# CMake files
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-
-# Debug files
-*.dSYM/
-
-# Temporary files
-*.swp
-*.tmp
-
-# Configuration files
-*.conf
+add_executable(dainm src/main.cpp)
