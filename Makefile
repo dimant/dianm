@@ -123,6 +123,33 @@ dainm/fast:
 	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/build
 .PHONY : dainm/fast
 
+src/DataGenerator.o: src/DataGenerator.cpp.o
+
+.PHONY : src/DataGenerator.o
+
+# target to build an object file
+src/DataGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/DataGenerator.cpp.o
+.PHONY : src/DataGenerator.cpp.o
+
+src/DataGenerator.i: src/DataGenerator.cpp.i
+
+.PHONY : src/DataGenerator.i
+
+# target to preprocess a source file
+src/DataGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/DataGenerator.cpp.i
+.PHONY : src/DataGenerator.cpp.i
+
+src/DataGenerator.s: src/DataGenerator.cpp.s
+
+.PHONY : src/DataGenerator.s
+
+# target to generate assembly for a file
+src/DataGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/DataGenerator.cpp.s
+.PHONY : src/DataGenerator.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... dainm"
+	@echo "... src/DataGenerator.o"
+	@echo "... src/DataGenerator.i"
+	@echo "... src/DataGenerator.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
