@@ -177,6 +177,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/preprocessing.o: src/preprocessing.cpp.o
+
+.PHONY : src/preprocessing.o
+
+# target to build an object file
+src/preprocessing.cpp.o:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/preprocessing.cpp.o
+.PHONY : src/preprocessing.cpp.o
+
+src/preprocessing.i: src/preprocessing.cpp.i
+
+.PHONY : src/preprocessing.i
+
+# target to preprocess a source file
+src/preprocessing.cpp.i:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/preprocessing.cpp.i
+.PHONY : src/preprocessing.cpp.i
+
+src/preprocessing.s: src/preprocessing.cpp.s
+
+.PHONY : src/preprocessing.s
+
+# target to generate assembly for a file
+src/preprocessing.cpp.s:
+	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/preprocessing.cpp.s
+.PHONY : src/preprocessing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/preprocessing.o"
+	@echo "... src/preprocessing.i"
+	@echo "... src/preprocessing.s"
 .PHONY : help
 
 

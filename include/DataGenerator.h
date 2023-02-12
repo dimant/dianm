@@ -7,20 +7,19 @@
 class DataGenerator
 {
 public:
-  DataGenerator(std::string path, int block_size) : 
-    ifile(path),
-    block_size(block_size)
-  {
-  }
+    DataGenerator(const std::string &path, const int block_size) : ifile(path),
+                                                                   block_size(block_size)
+    {
+    }
 
-  ~DataGenerator()
-  {
-    ifile.close();
-  } 
+    ~DataGenerator()
+    {
+        ifile.close();
+    }
 
-  std::vector<char> operator()();
+    std::vector<char> operator()();
 
 private:
-  std::ifstream ifile;
-  int block_size;
+    std::ifstream ifile;
+    const int block_size;
 };

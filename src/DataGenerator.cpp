@@ -8,22 +8,22 @@
 
 std::vector<char> DataGenerator::operator()()
 {
-  std::vector<char> result;
-  result.reserve(block_size);
+    std::vector<char> result;
+    result.reserve(block_size);
 
-  for (int i = 0; i < block_size; ++i)
-  {
-    if (ifile.eof())
+    for (int i = 0; i < block_size; ++i)
     {
-      result.push_back('\0');
+        if (ifile.eof())
+        {
+            result.push_back('\0');
+        }
+        else
+        {
+            char c;
+            ifile.get(c);
+            result.push_back(c);
+        }
     }
-    else
-    {
-      char c;
-      ifile.get(c);
-      result.push_back(c);
-    }
-  }
 
-  return result;
+    return result;
 }
