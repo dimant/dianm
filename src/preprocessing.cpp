@@ -41,7 +41,7 @@ std::map<char, int> alphabetize(std::string path)
 {
     auto vocab = std::map<char, int>();
     std::ifstream ifile(path);
-    int index = 1;
+    int index = 0;
     char c;
 
     if (!ifile) {
