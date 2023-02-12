@@ -6,7 +6,7 @@
 int main()
 {
     int block_size = 8;
-    auto vocab = getAlphabet("./data/input.txt");
+    auto vocab = alphabetize("./data/input.txt");
 
     DataGenerator generator("./data/input.txt", block_size);
 
