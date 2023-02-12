@@ -1,0 +1,3 @@
+/home/diman/src/dainm/build/CMakeFiles/rebuild_cache.dir
+/home/diman/src/dainm/build/CMakeFiles/edit_cache.dir
+/home/diman/src/dainm/build/CMakeFiles/dainm.dir

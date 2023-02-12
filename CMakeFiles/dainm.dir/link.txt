@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/dainm.dir/src/main.cpp.o  -o dainm 
