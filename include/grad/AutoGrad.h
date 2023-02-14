@@ -21,6 +21,12 @@ class Value
             this->gradient = gradient;
         }
 
+
+        double tanh_derivative(double x) {
+            double y = std::tanh(x);
+            return 1 - y * y;
+        }
+
     public:
         Value(double value) : value(value), gradient(1.0) {}
 
@@ -51,6 +57,14 @@ class Value
                 other->set_gradient(gradient * this->value);
             };
             return new Value(value * other->value, this, other);
+        }
+
+        Value* tanh(Value* other) {
+            this->_backprop = [this, other](double gradient) mutable {
+                this->set_gradient(gradient * tanh_derivative(other->value));
+                other->set_gradient(gradient * tanh_derivative(this->value));
+            };
+            return new Value(std::tanh(value), this, other);
         }
 
         void backprop(double gradient = 1.0)
