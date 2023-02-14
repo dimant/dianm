@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/diman/src/dainm
+CMAKE_SOURCE_DIR = /home/diman/src/dianm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/diman/src/dainm
+CMAKE_BINARY_DIR = /home/diman/src/dianm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diman/src/dainm/CMakeFiles /home/diman/src/dainm/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diman/src/dianm/CMakeFiles /home/diman/src/dianm/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/diman/src/dainm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/diman/src/dianm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,45 @@ dainm: cmake_check_build_system
 dainm/fast:
 	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/build
 .PHONY : dainm/fast
+
+#=============================================================================
+# Target rules for targets named dainm_tests
+
+# Build rule for target.
+dainm_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dainm_tests
+.PHONY : dainm_tests
+
+# fast build rule for target.
+dainm_tests/fast:
+	$(MAKE) -f CMakeFiles/dainm_tests.dir/build.make CMakeFiles/dainm_tests.dir/build
+.PHONY : dainm_tests/fast
+
+#=============================================================================
+# Target rules for targets named Catch2WithMain
+
+# Build rule for target.
+Catch2WithMain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Catch2WithMain
+.PHONY : Catch2WithMain
+
+# fast build rule for target.
+Catch2WithMain/fast:
+	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
+.PHONY : Catch2WithMain/fast
+
+#=============================================================================
+# Target rules for targets named Catch2
+
+# Build rule for target.
+Catch2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Catch2
+.PHONY : Catch2
+
+# fast build rule for target.
+Catch2/fast:
+	$(MAKE) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
+.PHONY : Catch2/fast
 
 src/DataGenerator.o: src/DataGenerator.cpp.o
 
@@ -204,6 +243,33 @@ src/preprocessing.cpp.s:
 	$(MAKE) -f CMakeFiles/dainm.dir/build.make CMakeFiles/dainm.dir/src/preprocessing.cpp.s
 .PHONY : src/preprocessing.cpp.s
 
+tests/tests.o: tests/tests.cpp.o
+
+.PHONY : tests/tests.o
+
+# target to build an object file
+tests/tests.cpp.o:
+	$(MAKE) -f CMakeFiles/dainm_tests.dir/build.make CMakeFiles/dainm_tests.dir/tests/tests.cpp.o
+.PHONY : tests/tests.cpp.o
+
+tests/tests.i: tests/tests.cpp.i
+
+.PHONY : tests/tests.i
+
+# target to preprocess a source file
+tests/tests.cpp.i:
+	$(MAKE) -f CMakeFiles/dainm_tests.dir/build.make CMakeFiles/dainm_tests.dir/tests/tests.cpp.i
+.PHONY : tests/tests.cpp.i
+
+tests/tests.s: tests/tests.cpp.s
+
+.PHONY : tests/tests.s
+
+# target to generate assembly for a file
+tests/tests.cpp.s:
+	$(MAKE) -f CMakeFiles/dainm_tests.dir/build.make CMakeFiles/dainm_tests.dir/tests/tests.cpp.s
+.PHONY : tests/tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,6 +279,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... dainm"
+	@echo "... dainm_tests"
+	@echo "... Catch2WithMain"
+	@echo "... Catch2"
 	@echo "... src/DataGenerator.o"
 	@echo "... src/DataGenerator.i"
 	@echo "... src/DataGenerator.s"
@@ -222,6 +291,9 @@ help:
 	@echo "... src/preprocessing.o"
 	@echo "... src/preprocessing.i"
 	@echo "... src/preprocessing.s"
+	@echo "... tests/tests.o"
+	@echo "... tests/tests.i"
+	@echo "... tests/tests.s"
 .PHONY : help
 
 
